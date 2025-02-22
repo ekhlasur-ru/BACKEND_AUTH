@@ -18,7 +18,7 @@ const router = express.Router();
 
 // const upload = multer({ storage: storage });
 
-// Create a new notice
+// Create|| add a new notice 
 router.post("/create", upload.single("photo"), async (req, res) => {
   const { title } = req.body;
   const photo = req.file ? req.file.path : "";
