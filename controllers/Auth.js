@@ -41,7 +41,7 @@ export const signup = async (req, res) => {
     console.log(error);
     res
       .status(500)
-      .json({ message: "Error occured during signup, please try again later" });
+      .json({ message: "Error occured during signup, please try again later now" });
   }
 };
 
