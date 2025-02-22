@@ -4,7 +4,7 @@ import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
 import { sendMail } from "../utils/sendVerificationEmail.js";
 import { sendLoginEmail } from "../utils/sendLoginEmail.js";
-import { sendVerificationCode } from "../utils/twilioSMS.js";
+// import { sendVerificationCode } from "../utils/twilioSMS.js";
 
 dotenv.config();
 
@@ -198,7 +198,7 @@ export const requestPasswordResetWhatsapp = async (req, res) => {
 
     try {
       // Send verification code via WhatsApp using Twilio Verify API
-      await sendVerificationCode(phoneNumber, resetToken);
+      // await sendVerificationCode(phoneNumber, resetToken);
       return res.status(200).json({ message: "Password reset token sent" });
     } catch (verificationError) {
       console.error(`Error sending verification code: ${verificationError}`);
