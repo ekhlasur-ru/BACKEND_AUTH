@@ -16,7 +16,6 @@ import {
   resetNewPassword,
   requestPasswordResetWhatsapp,
 } from "../controllers/Auth.js";
-// import { verifyToken } from "../middlewares/verifyToken.js";
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -34,8 +33,7 @@ router.post("/forget-pass", requestPasswordReset);
 router.post("/reset-pass", resetPassword);
 router.post("/add-new-pass", resetNewPassword);
 router.get("/check-user", checkAuth);
-// router.get("/check-admin", verifyToken, adminAuth);
-router.get("/check-admin",  adminAuth);
+router.get("/check-admin", adminAuth);
 router.get("/logout", logout);
 router.get("/all", alluser);
 router.get("/all/:id", alluserID);
